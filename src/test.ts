@@ -1,6 +1,7 @@
 import Top150 from "./top150/arrays.js";
 import LinkedList from "./ds/ll/index.js";
 import DoubleLinkedList from "./ds/dll/index.js";
+import Recursion from "./ds/recursion/rec.js"
 class Test{
     linkedList(){
         return new LinkedList();
@@ -15,6 +16,9 @@ class Test{
         return new Top150();
     }
 
+    recursion(){
+        return new Recursion();
+    }
     
 }
 
@@ -32,13 +36,15 @@ class Test{
 const top150 = new Test().top150();
 // const ans = top150.trappingRainWater2([0,1,0,2,1,0,1,3,2,1,2,1]);
 // const ans = top150.isValid("()");
+const rec = new Test().recursion();
 
 const dll = new DoubleLinkedList();
-const head = dll.arrToDll([2,3,5,7]);
+// const head = dll.arrToDll([2,3,5,7]);
 // const ans = dll.deleteEl(head,5);
 // const ans = dll.insertK(head,7,5)
-const ans = dll.reverse(head);
-dll.print(ans)
+// const ans = dll.reverse(head);
+const ans2 = rec.printOneToN(1,5);
+// dll.print(ans)
 
 // const ans = dll.insertBeforeEl(head,20,7)
 // const ans = top150.leadersArray([0])
@@ -48,5 +54,5 @@ dll.print(ans)
 //    const ans = top150.maxSubarrayKadane([-2,-3,4,-1,-2,1,5,-3]);
 
 
-console.log(ans);
+// console.log(ans);
 
